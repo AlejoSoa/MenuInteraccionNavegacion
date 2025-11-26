@@ -1,0 +1,14 @@
+<h2>{{ titulo() }}</h2>
+
+<ul>
+  <li *ngFor="let opcion of lista(); index as i"
+      (click)="seleccionar(i)"
+      [class.activo]="activo() === i">
+    {{ opcion }}
+  </li>
+</ul>
+
+
+<div class="contenido">
+  <p>{{ contenido() }}</p>
+</div>
