@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./interaccion.scss'],
 })
 export class Interaccion{
-  titulo: any;
+   titulo: any;
   lista: any;
   contenido: any;
 
@@ -29,15 +29,30 @@ export class Interaccion{
     const opcion = this.lista()[i] ?? '';
     this.shared.mostrarContenido(opcion);
 
-    if (i === 0) {
-      const menu = (this.titulo && typeof this.titulo === 'function') ? this.titulo() : '';
-      if (menu === 'Home') {
-        this.router.navigate(['/infoA']);
-      } else if (menu === 'Search') {
-        this.router.navigate(['/infoB']);
-      } else if (menu === 'HTML') {
-        this.router.navigate(['/infoC']);
+    const menu = this.titulo();
+
+    if (menu === 'Home') {
+      if (i === 0) {
+        this.router.navigate(['/informacionInicio']);
+      } else if (i === 1) {
+        this.router.navigate(['/informacionFicha']);
+      } 
+      return; 
+    }
+
+    if (menu === 'Search') {
+      if (i === 0) {
+        this.router.navigate(['/informacionBuscar']);
       }
+      return; 
+    }
+
+    if (menu === 'HTML') {
+      if (i === 0) {
+        this.router.navigate(['/informacionHtml']);
+      }
+      return; 
     }
   }
+
 }
