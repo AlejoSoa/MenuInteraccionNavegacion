@@ -1,0 +1,24 @@
+.nav-icon {
+  font-size: 2rem;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-icon:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.active-menu {
+  background-color: orange !important; 
+  color: white !important;
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.7);
+}
+
+.logo {
+  width: 60px;
+}

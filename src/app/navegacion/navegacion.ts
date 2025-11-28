@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Servicio } from '../servicios/servicio';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 
 
 @Component({
   selector: 'app-navegacion',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLinkActive],
   templateUrl: './navegacion.html',
   styleUrl: './navegacion.scss',
 })

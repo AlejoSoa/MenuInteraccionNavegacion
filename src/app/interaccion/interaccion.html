@@ -1,10 +1,14 @@
-<h2>{{ titulo() }}</h2>
+<div class="container mt-4">
+  <h2 class="titulo text-center mb-4">{{ titulo() }}</h2>
 
-<ul>
-  <li *ngFor="let opcion of lista(); index as i"
+  <ul class="list-group lista">
+    <li
+      *ngFor="let opcion of lista(); index as i"
+      class="list-group-item opcion"
       (click)="seleccionar(i)"
-      [class.activo]="activo() === i">
-    {{ opcion }}
-  </li>
-</ul>
-
+      [class.activo]="activo() === i"
+    >
+      {{ opcion }}
+    </li>
+  </ul>
+</div>

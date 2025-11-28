@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: black;
+    color: white;
+}
+.col-md-3 {
+  min-height: 90vh;
+  padding: 20px;
+  border-right: 2px solid #ff8c00;
+}
+
+.col-md-9 {
+  padding: 20px;
+}
